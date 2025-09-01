@@ -1,0 +1,81 @@
+{
+    "countries": [
+      {
+        "id": 1,
+        "name": "Australia",
+        "cities": [
+          {
+            "name": "Sydney, Australia",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/330px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg",
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+          },
+          {
+            "name": "Melbourne, Australia",
+            "imageUrl": "https://i.insider.com/5c520adfbde70f4492582334?width=800&format=jpeg&auto=webp",
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Japan",
+        "cities": [
+          {
+            "name": "Tokyo, Japan",
+            "imageUrl": "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/gettyimages-1390815938?_a=BAVAZGDX0",
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+          },
+          {
+            "name": "Kyoto, Japan",
+            "imageUrl": "https://www.hertz.com/content/dam/hertz/global/blog-articles/planning-a-trip/kyoto-japan/kyoto-header.jpg",
+            "description": "Known for its historic temples, gardens, and traditional tea houses."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Brazil",
+        "cities": [
+          {
+            "name": "Rio de Janeiro, Brazil",
+            "imageUrl": "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
+            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+          },
+          {
+            "name": "São Paulo, Brazil",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Marginal_Pinheiros_e_Jockey_Club.jpg/330px-Marginal_Pinheiros_e_Jockey_Club.jpg",
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+          }
+        ]
+      }
+    ],
+    "temples": [
+      {
+        "id": 1,
+        "name": "Angkor Wat, Cambodia",
+        "imageUrl": "https://cdn.britannica.com/56/122156-050-F5B469C8/overview-complex-Angkor-Wat-Cambodia.jpg",
+        "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+      },
+      {
+        "id": 2,
+        "name": "Taj Mahal, India",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMq0Utl9O-TUtLMs4xn6n1q0jyqAYN0YB3w&s",
+        "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+      }
+    ],
+    "beaches": [
+      {
+        "id": 1,
+        "name": "Bora Bora, French Polynesia",
+        "imageUrl": "https://cdn.britannica.com/16/60016-050-5D8447C8/peaks-Bora-Bora-Society-Islands-lagoon-French-Polynesia.jpg",
+        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+      },
+      {
+        "id": 2,
+        "name": "Copacabana Beach, Brazil",
+        "imageUrl": "https://voyeglobal.com/wp-content/uploads/2025/02/thumbnail-23.jpg",
+        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+      }
+    ]
+  }
+  

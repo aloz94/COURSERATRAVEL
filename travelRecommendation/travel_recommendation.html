@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelBloom – Home</title>
+  <style>
+    :root {
+      --bg: #111;
+      --text: #fff;
+      --muted: #d9e2ec;
+      --brand: #0ea5a3;
+      --brand-dark: #0b6c6a;
+    }
+
+    /* ===== Base ===== */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: #000; }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: rgba(17,17,17,0.85);
+      backdrop-filter: blur(6px);
+    }
+    .logo { font-weight: 700; letter-spacing: .5px; }
+    .nav-links { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a {
+      color: #eee; text-decoration: none; font-size: 0.95rem;
+    }
+    .nav-links a:hover { text-decoration: underline; }
+
+    .search-wrap { display: flex; align-items: center; gap: 8px; }
+    .search-wrap input[type="text"]{
+      width: 240px; max-width: 42vw;
+      padding: 8px 10px; border-radius: 999px; border: 1px solid #ccc; outline: none;
+    }
+    .btn { border: none; padding: 8px 12px; border-radius: 999px; cursor: pointer; }
+    .btn.search { background: var(--brand); color: #fff; }
+    .btn.search:hover { background: var(--brand-dark); }
+    .btn.reset { background: #2e2e2e; color: #fff; }
+    .btn.reset:hover { background: #454545; }
+
+    /* ===== Hero (Home) ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: left;
+      padding: 120px 24px 48px; /* top padding accounts for fixed navbar */
+      background-image: url("https://cdn.magicdecor.in/com/2024/06/07155849/Travel-Bucket-List-Wallpaper-Mural-for-Wall.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(120deg, rgba(0,0,0,.55) 20%, rgba(0,0,0,.25) 60%, rgba(0,0,0,.45) 100%);
+    }
+    .hero-content{
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      gap: 18px;
+    }
+    .kicker {
+      font-size: .9rem; letter-spacing: .25rem; font-weight: 700; color: var(--muted);
+      text-transform: uppercase;
+    }
+    .title {
+      line-height: 1.05; font-weight: 900; font-size: clamp(2rem, 5vw, 4rem);
+      text-transform: uppercase;
+    }
+    .title span { display:block; }
+    .intro {
+      max-width: 620px; color: #f2f6fa; font-size: 1rem; line-height: 1.6;
+      background: rgba(0,0,0,.35); padding: 12px 14px; border-radius: 10px;
+    }
+    .cta {
+      display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap;
+    }
+    .cta a {
+      display:inline-block; text-decoration: none; color:#fff; padding:10px 16px; border-radius: 999px;
+    }
+    .cta .primary { background: var(--brand); }
+    .cta .primary:hover { background: var(--brand-dark); }
+    .cta .ghost { outline: 2px solid #ffffffaa; }
+    .cta .ghost:hover { outline-color: #fff; background: #ffffff1c; }
+    @media (max-width: 560px){
+      .nav-links { display: none; } /* keep it simple for this task */
+      .search-wrap input[type="text"]{ width: 52vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">TravelBloom</div>
+    <ul class="nav-links">
+      <li><a href="travel_recommendation.html">Home</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="Contactus.html">Contact Us</a></li>
+    </ul>
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="Enter a destination or keyword" />
+      <button class="btn search" id="searchBtn">Search</button>
+      <button class="btn reset" id="resetBtn" type="button">Clear</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION (HOME PAGE) ===== -->
+  <header class="hero" role="banner" aria-label="Travel hero">
+    <div class="hero-content">
+      <div class="kicker">Plan your next escape</div>
+      <h1 class="title">
+        <span>Explore</span>
+        <span>Dream</span>
+        <span>Destination</span>
+      </h1>
+      <p class="intro">
+        Welcome to TravelBloom — your companion for discovering unforgettable places.
+        Browse curated guides, compare destinations, and build a bucket list that fits your style and budget.
+      </p>
+      <div class="cta">
+        <a class="primary" href="#destinations">Start Exploring</a>
+        <a class="ghost" href="about.html">Learn More</a>
+      </div>
+    </div>
+  </header>
+  <div id="results" style="padding:20px;"></div>
+
+  <script src="travel_recommendation.js"></script>
+
+  <script>
+    // minimal behavior for Search/Clear to satisfy task interactions
+    const input = document.getElementById('searchInput');
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      if (!input.value.trim()) { alert('Please enter a keyword'); return; }
+      alert('Searching for: ' + input.value.trim());
+    });
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      input.value = '';
+      input.focus();
+    });
+  </script>
+</body>
+</html>
